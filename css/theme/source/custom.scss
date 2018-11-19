@@ -1,0 +1,230 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700);
+@import url(https://fonts.googleapis.com/css?family=Cabin:400);
+
+
+// Override theme settings (see ../template/settings.scss)
+$main-font: 'Cabin', sans-serif;
+$heading-font: 'Roboto Condensed', sans-serif;
+$yellow: #FAE16C;
+$black: #1b1b1b;
+$white: #ffffff;
+
+body {
+    font-family: $main-font;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+section {
+    height: 100% !important;
+}
+
+.reveal {
+
+    // layout
+    .progress span {
+        background-color: $black;
+    }
+
+    .slides {
+        height: 100vh !important;
+        width: 100vw !important;
+        left: 0 !important;
+        top: 0 !important;
+        transform: none !important;
+        zoom: 0 !important;
+    }
+
+    .section {
+        display: flex !important;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        top: 0 !important;
+        left: 0 !important;
+        margin: 0;
+        padding: 0 !important;
+        text-align: left;
+
+        > .article {
+            max-width: 50%;
+
+            @media (max-width: 500px) {
+                max-width: 75%;
+            }
+        }
+    }
+
+    .article {
+        margin: 0 4em;
+        position: relative;
+
+        @media (max-width: 500px) {
+            margin: 0 2em;
+        }
+    }
+
+    .article--centered {
+        text-align: center;
+    }
+
+    .section--yellow {
+        background-color: $yellow;
+    }
+
+    .section--frame {
+        display: flex;
+        flex-direction: row;
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
+    }
+
+    .frame-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 0 1 33%;
+
+        @media (max-width: 500px) {
+            flex: 0 1 30%;
+        }
+    }
+
+    .frame-left--background {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .frame-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 1 auto;
+        width: 66.66%;
+        background-color: white;
+
+        > .article {
+            margin: auto;
+            max-width: 75%;
+
+            @media (max-width: 500px) {
+                max-width: 85%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            width: 70%;
+            width: 100%;
+        }
+    }
+    
+    // typography
+    h1, h2, h3 {
+        font-family: $heading-font;
+        font-weight: 700;
+        letter-spacing: -2px;
+        margin-bottom: .25em;
+    }
+    
+    h1 {
+        font-size: 120px;
+        line-height: 1;
+
+        @media (max-width: 500px) {
+            font-size: 50px;
+        }
+    }
+    
+    h2 {
+        font-size: 80px;
+        line-height: 1.1;
+
+        @media (max-width: 500px) {
+            font-size: 40px;
+        }
+    }
+    
+    h3 {
+        font-size: 60px;
+        line-height: 1.2;
+
+        @media (max-width: 500px) {
+            font-size: 30px;
+        }
+    }
+
+    p, cite {
+        font-size: 26px;
+
+        @media (max-width: 500px) {
+            font-size: 22px;
+        }
+    }
+
+    // blockquote
+    blockquote {
+        background: #f9f9f9;
+        border-left: 10px solid #ccc;
+        margin: 1em 10px;
+        padding: 2em 1.5em;
+        font-style: italic;
+        font-size: 40px;
+        
+        @media (max-width: 500px) {
+            font-size: 22px;
+        }
+    }
+
+    // figure + figcaptions
+    figure {
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            font-size: 20px;
+        }
+    }
+
+    .article-list {
+
+        @media (max-width: 500px) {
+            list-style-position: inside;
+        }
+    }
+    
+    .article-list__item {
+        font-size: 36px;
+        margin: 1em 0;
+
+        @media (max-width: 500px) {
+            font-size: 22px;
+        }
+    }
+    
+    // code 
+    .hljs {
+        font-size: 26px !important;
+        padding: 1em !important;
+
+        @media (max-width: 500px) {
+            font-size: 20px !important;
+        }
+    }
+
+    // section specific
+}

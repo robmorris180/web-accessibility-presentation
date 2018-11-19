@@ -1,0 +1,164 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700);
+@import url(https://fonts.googleapis.com/css?family=Cabin:400);
+body {
+  font-family: "Cabin", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400; }
+
+section {
+  height: 100% !important; }
+
+.reveal .progress span {
+  background-color: #1b1b1b; }
+
+.reveal .slides {
+  height: 100vh !important;
+  width: 100vw !important;
+  left: 0 !important;
+  top: 0 !important;
+  transform: none !important;
+  zoom: 0 !important; }
+
+.reveal .section {
+  display: flex !important;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  top: 0 !important;
+  left: 0 !important;
+  margin: 0;
+  padding: 0 !important;
+  text-align: left; }
+  .reveal .section > .article {
+    max-width: 50%; }
+    @media (max-width: 500px) {
+      .reveal .section > .article {
+        max-width: 75%; } }
+
+.reveal .article {
+  margin: 0 4em;
+  position: relative; }
+  @media (max-width: 500px) {
+    .reveal .article {
+      margin: 0 2em; } }
+
+.reveal .article--centered {
+  text-align: center; }
+
+.reveal .section--yellow {
+  background-color: #FAE16C; }
+
+.reveal .section--frame {
+  display: flex;
+  flex-direction: row; }
+  @media (max-width: 500px) {
+    .reveal .section--frame {
+      flex-direction: column; } }
+
+.reveal .frame-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 1 33%; }
+  @media (max-width: 500px) {
+    .reveal .frame-left {
+      flex: 0 1 30%; } }
+
+.reveal .frame-left--background {
+  background-size: cover;
+  background-position: center; }
+
+.reveal .frame-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
+  width: 66.66%;
+  background-color: white; }
+  .reveal .frame-right > .article {
+    margin: auto;
+    max-width: 75%; }
+    @media (max-width: 500px) {
+      .reveal .frame-right > .article {
+        max-width: 85%; } }
+  @media (max-width: 500px) {
+    .reveal .frame-right {
+      width: 70%;
+      width: 100%; } }
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  letter-spacing: -2px;
+  margin-bottom: .25em; }
+
+.reveal h1 {
+  font-size: 120px;
+  line-height: 1; }
+  @media (max-width: 500px) {
+    .reveal h1 {
+      font-size: 50px; } }
+
+.reveal h2 {
+  font-size: 80px;
+  line-height: 1.1; }
+  @media (max-width: 500px) {
+    .reveal h2 {
+      font-size: 40px; } }
+
+.reveal h3 {
+  font-size: 60px;
+  line-height: 1.2; }
+  @media (max-width: 500px) {
+    .reveal h3 {
+      font-size: 30px; } }
+
+.reveal p, .reveal cite {
+  font-size: 26px; }
+  @media (max-width: 500px) {
+    .reveal p, .reveal cite {
+      font-size: 22px; } }
+
+.reveal blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1em 10px;
+  padding: 2em 1.5em;
+  font-style: italic;
+  font-size: 40px; }
+  @media (max-width: 500px) {
+    .reveal blockquote {
+      font-size: 22px; } }
+
+.reveal figure img {
+  width: 100%;
+  height: auto; }
+
+.reveal figure figcaption {
+  font-size: 20px; }
+
+@media (max-width: 500px) {
+  .reveal .article-list {
+    list-style-position: inside; } }
+
+.reveal .article-list__item {
+  font-size: 36px;
+  margin: 1em 0; }
+  @media (max-width: 500px) {
+    .reveal .article-list__item {
+      font-size: 22px; } }
+
+.reveal .hljs {
+  font-size: 26px !important;
+  padding: 1em !important; }
+  @media (max-width: 500px) {
+    .reveal .hljs {
+      font-size: 20px !important; } }

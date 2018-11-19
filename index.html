@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Web Accessibility</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+                <!-- section 1 -->
+				<section class="section section--yellow">
+                    <article class="article">
+                        <h1>Web Accessibility</h1>
+                        <p>By Rob Morris</p>
+                    </article>
+                </section>
+
+                <!-- section 2 -->
+                <section class="section section--yellow">
+                    <article class="article">
+                        <h1>What is Web Accessibility?</h1>
+                    </article>
+                </section>
+
+                <!-- section 3 -->
+                <section class="section section--yellow section--frame">
+                    <div class="frame-left frame-left--background" style="background-image:url(images/sir-tim-berners-lee.jpg);"></div>
+                    <div class="frame-right">
+                        <article class="article article--centered">
+                            <blockquote>
+                                "The power of the Web is in its universality.<br>Access by everyone regardless of disability is an essential aspect."
+                            </blockquote>
+                            <cite>Tim Berners-Lee, W3C Director and inventor of the World Wide Web</cite>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- section 4 -->
+                <section class="section section--yellow section--frame">
+                    <div class="frame-left">
+                        <article class="article">
+                            <h2>Types of disability</h2>
+                        </article>
+                    </div>
+                    <div class="frame-right">
+                        <article class="article">
+                            <ul class="article-list">
+                                <li class="article-list__item">Permanent Disability</li> <!-- (Visual, Deafness, Physical or lack of motor skills) -->
+                                <li class="article-list__item">Temporary Disability</li> <!-- (Broken hand/arm, short term illness) -->
+                                <li class="article-list__item">Conditional Disability</li> <!-- (Slow internet connection, different devices and screen sizes) -->
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- section 5 -->
+                <section class="section section--yellow section--frame">
+                    <div class="frame-left">
+                        <article class="article">
+                            <h2>Why this is important?</h2>
+                        </article>
+                    </div>
+                    <div class="frame-right">
+                        <article class="article">
+                            <ul class="article-list">
+                                <li class="article-list__item">The web removes barriers of communication and interaction of the real world </li> <!-- (A unaccessible website creates such barriers) -->
+                                <li class="article-list__item">Equal access</li> <!-- (Everyone should be able to use a website, with or without disabilities, not excluding anyone!) -->
+                                <li class="article-list__item">Ease of access to information</li> <!-- (print, audio books etc can restrict access) -->
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- section 6 -->
+                <section class="section section--yellow section--frame">
+                    <div class="frame-left">
+                        <article class="article">
+                            <h2>Important for Businesses</h2>
+                        </article>
+                    </div>
+                    <div class="frame-right">
+                        <article class="article">
+                            <ul class="article-list">
+                                <li class="article-list__item">Extend Market Reach</li> <!-- (millions of people worldwide have disabilities, they spend trillions a year online) -->
+                                <li class="article-list__item">Returning customers</li>
+                                <li class="article-list__item">SEO</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- section 7 -->
+                <section>
+                    <section class="section section--yellow">
+                        <article class="article">
+                            <h1>Building an accessible website</h1>
+                        </article>
+                    </section>
+                    <section class="section section--yellow section--frame">
+                        <div class="frame-left">
+                            <article class="article">
+                                <h2>Semantic elements (Progressive enhancement)</h2>
+                            </article>
+                        </div>
+                        <div class="frame-right">
+                            <article class="article">
+                                <pre>
+                                    <code class="hljs xml" data-trim>
+                                        <article>
+                                            <header>
+                                                <h1>Semantic HTML</h1>
+                                            </header>
+                                            <p>This is an example blog post explaining HTML5 semantic markup.</p>
+                                            <footer>
+                                                <p>Article written by Rob Morris</p>
+                                            </footer>
+                                        </article>
+                                    </code>
+                                </pre>
+                            </article>
+                        </div>
+                    </section>
+                    <section class="section section--yellow section--frame">
+                        <div class="frame-left">
+                            <article class="article">
+                                <h2>Use of alt tags on images</h2>
+                            </article>
+                        </div>
+                        <div class="frame-right">
+                            <article class="article">
+                                <pre>
+                                    <code class="hljs xml" data-trim>
+                                        <img src="image.jpg" alt="Description of the image.">
+                                    </code>
+                                </pre>
+                            </article>
+                        </div>
+                    </section>
+                    <section class="section section--yellow section--frame">
+                        <div class="frame-left">
+                            <article class="article">
+                                <h2>Labelling controls
+                                </h2>
+                            </article>
+                        </div>
+                        <div class="frame-right">
+                            <article class="article">
+                                <pre>
+                                    <code class="hljs xml" data-trim>
+                                        <label for="keywords" class="show-for-sr">Keywords</label>
+                                        <input type="text" name="keywords" id="keywords">
+                                    </code>
+                                </pre>
+                            </article>
+                        </div>
+                    </section>
+                    <section class="section section--yellow section--frame">
+                        <div class="frame-left">
+                            <article class="article">
+                                <h2 class="article-list">Use title tags</h2>
+                            </article>
+                        </div>
+                        <div class="frame-right">
+                            <article class="article">
+                                <pre>
+                                    <code class="hljs xml" data-trim>
+                                        <title>Descriptive Page Title to accurately describe the page content and purpose</title>
+                                    </code>
+                                </pre>
+                            </article>
+                        </div>
+                    </section>
+                    <section class="section section--yellow section--frame">
+                        <div class="frame-left">
+                            <article class="article">
+                                <h2>Colours and contrast</h2>
+                            </article>
+                        </div>
+                        <div class="frame-right">
+                            <article class="article">
+                                <figure>
+                                    <img src="images/accessible-colours.png" alt="accessible colours fail and pass rate examples">
+                                    <figcaption>Example combinations of accessible colours.</figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                    </section>
+                    <section class="section section--yellow section--frame">
+                        <div class="frame-left">
+                            <article class="article">
+                                <h2>Keyboard navigation</h2>
+                            </article>
+                        </div>
+                        <div class="frame-right">
+                            <article class="article">
+                                <h3>Keyboard-only users and users of assistive technology use the keyboard to navigate all website content and access every
+                                interactive element.</h3>
+                                <ul class="article-list">
+                                    <li class="article-list__item">Check that all interactive elements receive tab order</li>
+                                    <li class="article-list__item">Test all interactive elements for keyboard-focus activation</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </section>
+                    <section class="section section--yellow section--frame">
+                        <div class="frame-left">
+                            <article class="article">
+                                <h2>ARIA (Accessible Rich Internet Application)</h2>
+                            </article>
+                        </div>
+                        <div class="frame-right">
+                            <article class="article">
+                                <pre>
+                                    <code class="hljs" data-trim xml>
+                                        <div class="accordion">
+                                            <h2 class="accordion__title">
+                                                <button class="accordion__btn" aria-expanded="false">
+                                                    Accordion title
+                                                    <svg viewBox="0 0 768 768" aria-hidden="true" focusable="false">
+                                                        <path d="M608 352H416V160c0-19.2-12.8-32-32-32s-32 12.8-32 32v192H160c-19.2 0-32 12.8-32 32s12.8 32 32 32h192v192c0 19.2 12.8 32 32 32s32-12.8 32-32V416h192c19.2 0 32-12.8 32-32s-12.8-32-32-32z" /></svg>
+                                                </button>
+                                            </h2>
+                                            <div class="accordion__content" hidden>
+                                                <p>Accordion content eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+                                        </div>
+                                    </code>
+                                </pre>
+                            </article>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- section 8 -->
+                <section class="section section--yellow section--frame">
+                    <div class="frame-left">
+                        <article class="article">
+                            <h2>Tools</h2>
+                        </article>
+                    </div>
+                    <div class="frame-right">
+                        <article class="article">
+                            <ul class="article-list">
+                                <li class="article-list__item">Screen Readers (JAWS, NVDA, VoiceOver)</li>
+                                <li class="article-list__item">Developer tools - Audit tool Chrome, Firefox accessibility tool</li>
+                                <li class="article-list__item">WAVE (https://wave.webaim.org/)</li>
+                                <li class="article-list__item">Accessible colour checker (http://accessible-colors.com/)</li>
+                                <li class="article-list__item">Cross browser testing (VM, Browserstack)</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- section 9 -->
+                <section class="section section--yellow">
+                    <article class="article">
+                        <h1>Thank you for listening</h1>
+                    </article>
+                </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
